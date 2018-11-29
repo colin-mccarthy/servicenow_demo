@@ -28,8 +28,7 @@
       password: "{{ SN_PASSWORD }}"
       instance: "{{ SN_INSTANCE }}"
       state: present
-      number: CHG0040002
-      table: change_request
+      table: incident
       data:
         severity: "{{ severity}}"
         priority: "{{ priority}}"
