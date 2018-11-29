@@ -24,9 +24,9 @@
 
   - name: Create an incident
     snow_record:
-      username: "{{ username }}"
-      password: "{{ password }}"
-      instance: "{{ instance }}"
+      username: "{{ SN_USERNAME }}"
+      password: "{{ SN_PASSWORD }}"
+      instance: "{{ SN_INSTANCE }}"
       state: present
       number: CHG0040002
       table: change_request
