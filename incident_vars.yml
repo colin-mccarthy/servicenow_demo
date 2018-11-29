@@ -1,8 +1,10 @@
 #snow_record variables
 
-username: $omitted$
-password: 
-instance: 
+#Custom credential in Tower
+
+# SN_USERNAME: 
+# SN_PASSWORD: 
+# SN_INSTANCE: 
 
 state: present
 
