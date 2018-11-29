@@ -37,4 +37,4 @@
         u_ios_version: "{{ system_facts.version }}"
     register: new_incident
 
-  - debug: var=new_incident.record 
+  - debug: var=new_incident.record.number
