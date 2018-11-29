@@ -1,0 +1,40 @@
+---
+- name: create ticket with notes
+  hosts: ios
+  gather_facts: no
+  connection: network_cli
+  roles:
+    - ansible-network.network-engine
+
+  tasks:
+  - name: include vars
+    include_vars: incident_vars.yml
+
+  - name: show version
+    ios_command:
+      commands:
+        - show version
+    register: version
+
+  - name: parse show version
+    command_parser:
+      file: "parsers/show_version.yaml"
+      content: "{{ version.stdout.0 }}"
+
+
+  - name: Create an incident
+    snow_record:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      instance: "{{ instance }}"
+      state: present
+      number: CHG0040002
+      table: change_request
+      data:
+        severity: "{{ severity}}"
+        priority: "{{ priority}}"
+        u_device_up_time: "{{ system_facts.uptime }}"
+        u_ios_version: "{{ system_facts.version }}"
+    register: new_incident
+
+  - debug: var=new_incident.record 
