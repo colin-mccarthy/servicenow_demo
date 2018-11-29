@@ -1,0 +1,13 @@
+#snow_record variables
+
+username: $omitted$
+password: 
+instance: 
+
+state: present
+
+#data variables
+
+severity: 2
+priority: 2
+category: network
