@@ -34,6 +34,7 @@
         priority: "{{ priority}}"
         u_device_up_time: "{{ system_facts.uptime }}"
         u_ios_version: "{{ system_facts.version }}"
+        short_description: "This ticket was created by Ansible"
     register: new_incident
 
   - debug: var=new_incident.record.number
