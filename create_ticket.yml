@@ -27,9 +27,9 @@
       state: present
       table: incident
       data:
-     #   username: "{{ SN_USERNAME }}"
-     #   password: "{{ SN_PASSWORD }}"
-     #   instance: "{{ SN_INSTANCE }}"
+        username: "{{ SN_USERNAME }}"
+        password: "{{ SN_PASSWORD }}"
+        instance: "{{ SN_INSTANCE }}"
         severity: "{{ severity}}"
         priority: "{{ priority}}"
         u_device_up_time: "{{ system_facts.uptime }}"
