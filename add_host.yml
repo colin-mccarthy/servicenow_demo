@@ -1,13 +1,25 @@
 ---
 - name: create ticket with notes
-  hosts: all
+  hosts: ios
   gather_facts: no
-  connection: local
-
+  connection: network_cli
+  roles:
+    - ansible-network.network-engine
 
   tasks:
   - name: include vars
     include_vars: incident_vars.yml
+
+  - name: show version
+    ios_command:
+      commands:
+        - show version
+    register: version
+
+  - name: parse show version
+    command_parser:
+      file: "parsers/show_version.yaml"
+      content: "{{ version.stdout.0 }}"
 
 
   - name: Create an incident
