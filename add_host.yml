@@ -29,7 +29,6 @@
       username: "{{ SN_USERNAME }}"
       password: "{{ SN_PASSWORD }}"
       instance: "{{ SN_INSTANCE }}"
-      data:
     register: new_host
 
   - debug: var=new_host.record
