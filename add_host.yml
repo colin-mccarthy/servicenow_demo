@@ -29,6 +29,8 @@
       username: "{{ SN_USERNAME }}"
       password: "{{ SN_PASSWORD }}"
       instance: "{{ SN_INSTANCE }}"
+      data:
+        name: lnux100
     register: new_host
 
   - debug: var=new_host.record
