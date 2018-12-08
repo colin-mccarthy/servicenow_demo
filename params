@@ -1,7 +1,7 @@
-{
-    "changed": false,
-    "new_host.record": {
-        "lease_id": "",
+Linux Servers
+------------- 
+
+       "lease_id": "",
         "operational_status": "1",
         "checked_in": "",
         "cd_rom": "false",
@@ -25,10 +25,7 @@
         "install_date": "",
         "used_for": "Production",
         "host_name": "",
-        "sys_domain": {
-            "link": "https://dev56561.service-now.com/api/now/table/sys_user_group/global",
-            "value": "global"
-        },
+        "sys_domain": 
         "delivery_date": "",
         "sys_tags": "",
         "hardware_substatus": "",
@@ -39,10 +36,7 @@
         "category": "Hardware",
         "sys_updated_by": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
         "comments": "",
-        "model_id": {
-            "link": "https://dev56561.service-now.com/api/now/table/cmdb_model/675293a8db1223009aaee1bb4b961952",
-            "value": "675293a8db1223009aaee1bb4b961952"
-        },
+        "model_id": 
         "sys_class_name": "cmdb_ci_linux_server",
         "justification": "",
         "schedule": "",
@@ -68,10 +62,7 @@
         "model_number": "",
         "os_version": "",
         "sys_id": "6f521fe4db1223009aaee1bb4b961946",
-        "asset": {
-            "link": "https://dev56561.service-now.com/api/now/table/alm_asset/6f5293a8db1223009aaee1bb4b961955",
-            "value": "6f5293a8db1223009aaee1bb4b961955"
-        },
+        "asset": 
         "cpu_core_count": "",
         "mac_address": "",
         "serial_number": "",
@@ -110,7 +101,3 @@
         "due_in": "",
         "assigned_to": "",
         "first_discovered": ""
-    },
-    "_ansible_verbose_always": true,
-    "_ansible_no_log": false
-}
