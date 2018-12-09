@@ -39,6 +39,7 @@
         manufacturer: cisco
         model_number: "{{ ansible_net_model }}"
         assigned_to: "Abel Tuter"
+        firmware_version: "{{ ansible_net_version }}"
     register: new_host
 
   - debug: var=new_host.record
