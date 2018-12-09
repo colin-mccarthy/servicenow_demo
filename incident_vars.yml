@@ -5,12 +5,11 @@
 # SN_PASSWORD: 
 # SN_INSTANCE: 
 
-
+state: present
 
 #data variables
 
 #incident
-state: present
 severity: 2
 priority: 2
 category: network
