@@ -33,4 +33,4 @@
     register: new_host
 
 #  - debug: var=new_host.record
-#  - debug: var=ansible_facts
+  - debug: var=ansible_facts
