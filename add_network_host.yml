@@ -9,18 +9,7 @@
   tasks:
   - name: include vars
     include_vars: incident_vars.yml
-
-  - name: show version
-    ios_command:
-      commands:
-        - show version
-    register: version
-
-
-  - name: parse show version
-    command_parser:
-      file: "parsers/show_version.yaml"
-      content: "{{ version.stdout.0 }}"
+    
       
   - name: "gather_facts: yes"
     ios_facts:
@@ -40,6 +29,7 @@
         model_number: "{{ ansible_net_model }}"
         assigned_to: "Abel Tuter"
         firmware_version: "{{ ansible_net_version }}"
+        serial_number: "{{ ansible_net_serialnum }}"
     register: new_host
 
   - debug: var=new_host.record
