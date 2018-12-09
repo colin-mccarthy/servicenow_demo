@@ -17,3 +17,4 @@ category: network
 #network host
 company: "E-Corp"
 device_type: switch
+assigned_to: "Abel Tuter"
