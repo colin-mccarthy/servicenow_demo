@@ -39,4 +39,4 @@
     register: new_host
 
 #  - debug: var=new_host.record
-  - debug: var=ansible_facts.net_interfaces.GigabitEthernet0/1
+  - debug: var=ansible_facts.net_interfaces[GigabitEthernet0/1]
