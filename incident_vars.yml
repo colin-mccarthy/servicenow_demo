@@ -12,3 +12,5 @@ state: present
 severity: 2
 priority: 2
 category: network
+
+company: "E Corp"
