@@ -14,3 +14,4 @@ priority: 2
 category: network
 
 company: "E-Corp"
+device_type: switch
