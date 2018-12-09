@@ -32,4 +32,5 @@
         serial_number: "{{ ansible_net_serialnum }}"
     register: new_host
 
-  - debug: var=new_host.record
+#  - debug: var=new_host.record
+  - debug: var=ansible_facts
