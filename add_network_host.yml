@@ -24,7 +24,7 @@
       
   - name: "gather_facts: yes"
     ios_facts:
-    gather_subset: all
+      gather_subset: all
 
 
   - name: Create an incident
