@@ -27,6 +27,7 @@
         name: "{{ ansible_net_hostname }}"
         manufacturer: cisco
         firmware_manufacturer: cisco
+        device_type: switch
         model_number: "{{ ansible_net_model }}"
         assigned_to: "Abel Tuter"
         firmware_version: "{{ ansible_net_version }}"
