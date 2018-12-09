@@ -36,7 +36,6 @@
         serial_number: "{{ ansible_net_serialnum }}"
         ip_address: "{{ inventory_hostname }}"
         mac_address: '{{ ansible_facts.net_interfaces["GigabitEthernet0/1"].macaddress }}'
- #       ports: '{{ ansible_facts.net_interfaces["GigabitEthernet0/1"].mediatype }}'
     register: new_host
 
 #  - debug: var=new_host.record
