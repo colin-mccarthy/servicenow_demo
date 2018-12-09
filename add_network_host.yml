@@ -20,7 +20,7 @@
 
   - name: Create a network host record for "{{ inventory_hostname }}"
     snow_record:
-      state: present
+      state: "{{ state }}"
       table: cmdb_ci_netgear
       username: "{{ SN_USERNAME }}"
       password: "{{ SN_PASSWORD }}"
