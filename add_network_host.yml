@@ -16,7 +16,7 @@
         - show version
     register: version
 
-  - debug: var=new_host.record
+  - debug: var=version
 
   - name: parse show version
     command_parser:
