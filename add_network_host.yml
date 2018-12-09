@@ -29,7 +29,7 @@
         name: "{{ ansible_net_hostname }}"
         manufacturer: "{{ vendor }}"
         firmware_manufacturer: "{{ vendor }}"
-        device_type: switch
+        device_type: "{{ device_type }}"
         model_number: "{{ ansible_net_model }}"
         assigned_to: "Abel Tuter"
         firmware_version: "{{ ansible_net_version }}"
