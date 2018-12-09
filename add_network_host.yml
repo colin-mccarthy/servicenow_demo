@@ -37,6 +37,7 @@
       data:
         name: "{{ ansible_net_hostname }}"
         manufacturer: cisco
+        company: "{{ company }}"
     register: new_host
 
   - debug: var=new_host.record
