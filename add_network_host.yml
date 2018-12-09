@@ -7,15 +7,16 @@
   - name: include vars
     include_vars: incident_vars.yml
     
+    
   - name: set vendor fact  
     set_fact: vendor="cisco"  
     when: ansible_network_os == "ios"
     
-      
+          
   - name: "gather_facts: yes"
     ios_facts:
       gather_subset: all
-
+      
 
   - name: Create a network host record for "{{ inventory_hostname }}"
     snow_record:
@@ -39,4 +40,4 @@
     register: new_host
 
 #  - debug: var=new_host.record
-#  - debug: var=ansible_facts.net_interfaces["GigabitEthernet0/1"].macaddress
+#  - debug: var=ansible_facts
