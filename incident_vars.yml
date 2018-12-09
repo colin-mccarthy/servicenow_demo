@@ -9,9 +9,11 @@ state: present
 
 #data variables
 
+#incident
 severity: 2
 priority: 2
 category: network
 
+#network host
 company: "E-Corp"
 device_type: switch
