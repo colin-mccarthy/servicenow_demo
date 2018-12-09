@@ -16,7 +16,7 @@
       gather_subset: all
 
 
-  - name: Create an incident
+  - name: Create a network host record for "{{ inventory_hostname }}"
     snow_record:
       state: present
       table: cmdb_ci_netgear
@@ -30,6 +30,7 @@
         assigned_to: "Abel Tuter"
         firmware_version: "{{ ansible_net_version }}"
         serial_number: "{{ ansible_net_serialnum }}"
+        ip_address: "{{ inventory_hostname }}"
     register: new_host
 
 #  - debug: var=new_host.record
