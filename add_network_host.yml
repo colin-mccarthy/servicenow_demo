@@ -1,10 +1,7 @@
 ---
-- name: create ticket with notes
-  hosts: ios
+- hosts: ios
   gather_facts: no
   connection: network_cli
-  roles:
-    - ansible-network.network-engine
 
   tasks:
   - name: include vars
@@ -36,4 +33,4 @@
     register: new_host
 
 #  - debug: var=new_host.record
-  - debug: var=ansible_facts
+#  - debug: var=ansible_facts
