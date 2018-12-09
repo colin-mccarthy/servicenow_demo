@@ -9,7 +9,7 @@
     
   - name: set vendor fact  
     set_fact: vendor="cisco"  
-    when: ansible_network_os==ios
+    when: ansible_network_os == "ios"
     
       
   - name: "gather_facts: yes"
