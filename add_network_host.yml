@@ -16,12 +16,13 @@
         - show version
     register: version
 
-  - debug: var=version
 
   - name: parse show version
     command_parser:
       file: "parsers/show_version.yaml"
       content: "{{ version.stdout.0 }}"
+      
+  - debug: var=system_facts
 
 
   - name: Create an incident
