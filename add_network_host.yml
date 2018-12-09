@@ -34,8 +34,8 @@
       username: "{{ SN_USERNAME }}"
       password: "{{ SN_PASSWORD }}"
       instance: "{{ SN_INSTANCE }}"
-      name: "{{ ansible_net_hostname }}"
       data:
+        name: "{{ ansible_net_hostname }}"
         manufacturer: cisco
     register: new_host
 
