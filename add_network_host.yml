@@ -39,6 +39,7 @@
         manufacturer: cisco
         company: "{{ company }}"
         model_number: "{{ ansible_net_model }}"
+        assigned_to: "Abel Tuter"
     register: new_host
 
   - debug: var=new_host.record
