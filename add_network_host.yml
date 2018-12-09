@@ -22,7 +22,9 @@
       file: "parsers/show_version.yaml"
       content: "{{ version.stdout.0 }}"
       
-  - debug: var=system_facts
+  - name: "gather_facts: yes"
+    ios_facts:
+    gather_subset: all
 
 
   - name: Create an incident
