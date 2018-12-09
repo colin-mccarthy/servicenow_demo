@@ -37,7 +37,6 @@
       data:
         name: "{{ ansible_net_hostname }}"
         manufacturer: cisco
-        company: "{{ company }}"
         model_number: "{{ ansible_net_model }}"
         assigned_to: "Abel Tuter"
     register: new_host
