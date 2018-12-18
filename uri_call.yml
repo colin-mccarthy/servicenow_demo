@@ -1,0 +1,35 @@
+---
+
+- hosts: localhost
+  connection: local
+
+
+
+  tasks:
+  - name: Create a Service Now Ticket
+    uri:
+      url: "https://{{ SN_INSTANCE }}.service-now.com/api/now/table/change_request"
+      method: POST
+      user: "{{ SN_USER }}"
+      password: "{{ SN_PASSWORD }}"
+      body: 
+        description: "test of api from Ansible"
+        cab_required: true
+        category: "Patching"
+        short_description: "Ansible API Test"
+        start_date: "2018-07-07 00:00:00"
+        end_date: "2018-07-07 06:00:00"
+        assignment_group: b85d44954a3623120004689b2d5dd60a
+        assigned_to: 46d96f57a9fe198101947a9620895886
+      force_basic_auth: yes
+      status_code: 201
+      body_format: json
+    register: snow_output
+
+
+  - debug:
+      var: snow_output.json.result.number
+
+
+  - debug:
+      var: snow_output.json.result.sys_id
