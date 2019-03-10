@@ -1,0 +1,8 @@
+---
+- name: create ticket with notes
+  hosts: ios
+  gather_facts: no
+  connection: network_cli
+  roles:
+    - ansible-network.network-engine
+    - servicenow_network_tickets
