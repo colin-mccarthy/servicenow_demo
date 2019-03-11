@@ -53,4 +53,4 @@
   - name: import network-engine role
     import_role:
       name: servicenow_network_tickets
-    when: configured
+    when: configured == true
