@@ -46,13 +46,13 @@
       lines:
         - "no {{ item }}"
 
-  - name: CHECK CHANGE - snmp
-    when: set_snmp.changed or remove_snmp.changed 
-    set_fact: configured=true
-    notify: servicenow_network_tickets
-
-  - debug: var=configured
-
   - name: servicenow_network_tickets
+    when: set_snmp.changed or remove_snmp.changed 
     import_role:
       name: servicenow_network_tickets
+
+#  - debug: var=configured
+
+#  - name: servicenow_network_tickets
+#    import_role:
+#      name: servicenow_network_tickets
