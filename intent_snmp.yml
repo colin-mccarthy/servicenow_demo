@@ -18,7 +18,7 @@
 
   handlers:
   - name: servicenow_network_tickets
-    debud: msg= "this works"
+    debug: msg= "this works"
     listen: servicenow_network_tickets
 
 
