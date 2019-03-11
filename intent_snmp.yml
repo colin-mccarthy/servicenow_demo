@@ -15,7 +15,14 @@
       - snmp-server enable traps ospf lsa
       - snmp-server host 192.168.161.110 version 2c public udp-port 161
       
-      
+  
+
+  handlers:
+
+    - name: import servicenow_network_tickets role
+      import_role:
+        name: servicenow_network_tickets
+      listen: servicenow_network_tickets
 
   tasks:
   
@@ -45,12 +52,7 @@
   - name: CHECK CHANGE - snmp
     when: set_snmp.changed or remove_snmp.changed 
     set_fact: configured=true
+    notify: servicenow_network_tickets
 
   - debug: var=configured
 
-
-
-  - name: import network-engine role
-    import_role:
-      name: servicenow_network_tickets
-    when: configured == true
