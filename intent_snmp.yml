@@ -18,7 +18,7 @@
 
   handlers:
   - name: servicenow_network_tickets
-    include: call_ticket.yml
+    debud: msg= "this works"
     listen: servicenow_network_tickets
 
 
