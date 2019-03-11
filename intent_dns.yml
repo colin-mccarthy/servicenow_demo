@@ -37,8 +37,7 @@
       lines:
         - "no {{ item }}"
 
-  - name: CHECK CHANGE - dns
+  - name: servicenow_network_tickets
     when: set_dns.changed or remove_dns.changed
-    set_fact: configured=true
-  
-  - debug: var=configured
+    import_role:
+      name: servicenow_network_tickets

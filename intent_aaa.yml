@@ -44,8 +44,7 @@
       lines:
         - "no {{ item }}"
 
-  - name: CHECK CHANGE - aaa
-    when: set_aaa.changed or remove_aaa.changed 
-    set_fact: configured=true
-
-  - debug: var=configured
+  - name: servicenow_network_tickets
+    when: set_aaa.changed or remove_aaa.changed
+    import_role:
+      name: servicenow_network_tickets

@@ -36,11 +36,10 @@
       lines:
         - "no {{ item }}"
 
-  - name: CHECK CHANGE - ntp
+  - name: servicenow_network_tickets
     when: set_ntp.changed or remove_ntp.changed
-    set_fact: configured=true
-
-  - debug: var=configured
+    import_role:
+      name: servicenow_network_tickets
     
     
     

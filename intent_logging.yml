@@ -32,11 +32,10 @@
     loop: "{{ log.stdout_lines[0] }}"
     register: remove_logging
 
-  - name: CHECK CHANGE - logging
+  - name: servicenow_network_tickets
     when: set_logging.changed or remove_logging.changed
-    set_fact: configured=true
-
-  - debug: var=configured
+    import_role:
+      name: servicenow_network_tickets
 
 
 

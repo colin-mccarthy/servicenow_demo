@@ -1,5 +1,0 @@
----
-
-  - name: servicenow_network_tickets
-    import_role:
-      name: servicenow_network_tickets
