@@ -19,6 +19,7 @@
   handlers:
   - name: servicenow_network_tickets
     include: call_ticket.yml
+    listen: servicenow_network_tickets
 
 
   tasks:
