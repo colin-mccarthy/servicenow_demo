@@ -20,9 +20,9 @@
   handlers:
 
     - name: import servicenow_network_tickets role
+      listen: servicenow_network_tickets
       import_role:
         name: servicenow_network_tickets
-      listen: servicenow_network_tickets
 
   tasks:
   
