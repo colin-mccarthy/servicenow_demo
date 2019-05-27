@@ -17,16 +17,10 @@
     register: version
 
 
-
-
-  - name: Read in parse_genie role
-	include_role:
-	  name: clay584.parse_genie
-
   - name: Debug Genie Filter
-	debug:
-	  msg: "{{ version.stdout | parse_genie(command='show version', os='ios') }}"
-	delegate_to: localhost
+    debug:
+      msg: "{{ version.stdout | parse_genie(command='show version', os='ios') }}"
+    delegate_to: localhost
 
 
 
