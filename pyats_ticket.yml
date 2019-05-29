@@ -21,7 +21,7 @@
 
   - name: Debug Genie Filter
     debug:
-      msg: "{{ version.stdout | parse_genie(command='show version', os='ios') }}"
+      msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
     delegate_to: localhost
 
 
