@@ -16,7 +16,7 @@
         - show version
     register: version
 
-  - meta: end_play
+#  - meta: end_play
 
 
   - name: Debug Genie Filter
