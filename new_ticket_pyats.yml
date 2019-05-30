@@ -6,9 +6,8 @@
   roles:
     - parse_genie
 
+
   tasks:
-  - name: include vars
-    include_vars: incident_vars.yml
 
   - name: show version
     ios_command:
@@ -16,15 +15,19 @@
         - show version
     register: version
 
-#  - meta: end_play
-
 
   - name: Debug Genie Filter
     debug:
       msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
-    delegate_to: localhost
+      verbosity: 2
 
+  - name: Set Fact Genie Filter
+    set_fact:
+      pyats_version: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
 
+  - name: Debug Pyats facts
+    debug:
+     var: pyats_version.version.rtr_type
 
 
 
