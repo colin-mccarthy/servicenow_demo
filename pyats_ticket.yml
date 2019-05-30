@@ -19,3 +19,14 @@
     debug:
       msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
     delegate_to: localhost
+    verbosity: 2
+
+  - name: Set Fact Genie Filter
+    set_fact: 
+      pyats_version: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
+    delegate_to: localhost
+
+  - name: Debug Pyats facts
+    debug:
+     var: pyats_version
+    delegate_to: localhost
