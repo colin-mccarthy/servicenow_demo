@@ -29,4 +29,3 @@
   - name: Debug Pyats facts
     debug:
      var: pyats_version.version.rtr_type
-    delegate_to: localhost
