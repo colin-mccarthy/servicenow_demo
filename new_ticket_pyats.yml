@@ -27,12 +27,16 @@
 
   - name: Debug Pyats facts
     debug:
-     var: pyats_version.version.rtr_type
+     var: pyats_version.version.version
+
+  - name: Debug Pyats facts
+    debug:
+     var: pyats_version.version.uptime
 
 
 
 
-  - meta: end_play
+#  - meta: end_play
 
   - name: Create an incident
     snow_record:
@@ -43,8 +47,8 @@
       instance: "{{ SN_INSTANCE }}"
       data:
         priority: "{{ priority}}"
-        u_device_up_time: "{{ system_facts.uptime }}"
-        u_ios_version: "{{ system_facts.version }}"
+        u_device_up_time: "{{ pyats_version.version.uptime }}"
+        u_ios_version: "{{ pyats_version.version.version }}"
         short_description: "This ticket was created by Ansible"
     register: new_incident
 
