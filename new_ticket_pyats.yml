@@ -18,12 +18,6 @@
         - show version
     register: version
 
-
-  - name: Debug Genie Filter
-    debug:
-      msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
-      verbosity: 2
-
   - name: Set Fact Genie Filter
     set_fact:
       pyats_version: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
@@ -55,4 +49,4 @@
         short_description: "This ticket was created by Ansible"
     register: new_incident
 
-  - debug: var=new_incident.record
+  - debug: var=new_incident.record.number
