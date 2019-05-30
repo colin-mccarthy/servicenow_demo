@@ -16,33 +16,8 @@
         - show version
     register: version
 
-#  - meta: end_play
-
 
   - name: Debug Genie Filter
     debug:
       msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
     delegate_to: localhost
-
-
-
-
-
-
-  - meta: end_play
-
-  - name: Create an incident
-    snow_record:
-      state: present
-      table: incident
-      username: "{{ SN_USERNAME }}"
-      password: "{{ SN_PASSWORD }}"
-      instance: "{{ SN_INSTANCE }}"
-      data:
-        priority: "{{ priority}}"
-        u_device_up_time: "{{ system_facts.uptime }}"
-        u_ios_version: "{{ system_facts.version }}"
-        short_description: "This ticket was created by Ansible"
-    register: new_incident
-
-  - debug: var=new_incident.record
