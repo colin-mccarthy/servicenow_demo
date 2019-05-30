@@ -19,7 +19,6 @@
     debug:
       msg: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
       verbosity: 2
-    delegate_to: localhost
 
   - name: Set Fact Genie Filter
     set_fact: 
