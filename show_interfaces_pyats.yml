@@ -8,17 +8,11 @@
 
   tasks:
 
-  - name: show version
+  - name: show interfaces
     ios_command:
       commands:
         - show interfaces
     register: interfaces
-
-
-  - name: Debug Genie Filter
-    debug:
-      msg: "{{ interfaces['stdout'][0] | parse_genie(command='show interfaces', os='ios') }}"
-      verbosity: 2
 
   - name: Set Fact Genie Filter
     set_fact: 
