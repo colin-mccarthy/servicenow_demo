@@ -1,0 +1,8 @@
+---
+- name: Support Test
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+  - debug: msg={{lookup("config", "INVENTORY_ENABLED")}}
