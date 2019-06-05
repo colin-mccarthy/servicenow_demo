@@ -25,7 +25,7 @@
 
   - name: "'unnest' all elements into single list"
     set_fact:
-      foo: "{{lookup('flattened', [log.stout_lines] )}}"
+      foo: "{{lookup('flattened', [log.stdout_lines] )}}"
     
   - debug: var=log.stdout_lines
 
