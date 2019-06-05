@@ -1,0 +1,11 @@
+---
+#snow_record variables
+ 
+sn_username: admin
+sn_password: my_password
+sn_instance: dev99999
+ 
+#data variables
+ 
+sn_severity: 2
+sn_priority: 2
