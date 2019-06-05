@@ -6,19 +6,19 @@
  
   tasks:
   - name: include vars
-	  include_vars: change_request_vars.yml
+    include_vars: change_request_vars.yml
  
   - name: Create a change request
-	  snow_record:
-  	  state: present
-  	  table: change_request
-  	  username: "{{ SN_USERNAME }}"
-  	  password: "{{ SN_PASSWORD }}"
-  	  instance: "{{ SN_INSTANCE }}"
-  	  data:
-    	  severity: “{{ SEVERITY }}”
-    	  priority: “{{ PRIORITY }}”
-    	  short_description: "This is a test opened by Ansible"
-	  register: new_incident
+    snow_record:
+      state: present
+      table: change_request
+      username: "{{ SN_USERNAME }}"
+      password: "{{ SN_PASSWORD }}"
+      instance: "{{ SN_INSTANCE }}"
+      data:
+        severity: “{{ SEVERITY }}”
+        priority: “{{ PRIORITY }}”
+        short_description: "This is a test opened by Ansible"
+    register: new_incident
  
   - debug: var: new_incident.record
