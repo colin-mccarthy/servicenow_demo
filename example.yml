@@ -1,0 +1,13 @@
+  - name: Modify a change request
+    snow_record:
+      state: present
+      table: change_request
+      username: “{{ SN_USERNAME }}”
+      password: “{{ SN_PASSWORD }}”
+      instance: “{{ SN_INSTANCE }}”
+      number: CHG0030002
+      data:
+        state: -3
+    register: incident
+ 
+  - debug: var=incident.record.state
