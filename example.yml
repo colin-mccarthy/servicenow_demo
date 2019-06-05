@@ -2,9 +2,9 @@
     snow_record:
       state: present
       table: change_request
-      username: “{{ SN_USERNAME }}”
-      password: “{{ SN_PASSWORD }}”
-      instance: “{{ SN_INSTANCE }}”
+      username: “{{ sn_username }}”
+      password: “{{ sn_password }}”
+      instance: “{{ sn_instance }}”
       number: CHG0030002
       data:
         state: -3
