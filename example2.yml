@@ -21,4 +21,5 @@
         short_description: "This is a test opened by Ansible"
     register: new_incident
  
-  - debug: var: new_incident.record
+  - debug: 
+      var: new_incident.record
