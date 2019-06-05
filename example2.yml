@@ -16,8 +16,8 @@
       password: "{{ sn_password }}"
       instance: "{{ sn_instance }}"
       data:
-        severity: “{{ severity }}”
-        priority: “{{ priority }}”
+        severity: “{{ sn_severity }}”
+        priority: “{{ sn_priority }}”
         short_description: "This is a test opened by Ansible"
     register: new_incident
  
