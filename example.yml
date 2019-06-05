@@ -10,4 +10,5 @@
         state: -3
     register: incident
  
-  - debug: var=incident.record.state
+  - debug: 
+      var: incident.record.state
