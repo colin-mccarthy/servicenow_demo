@@ -4,7 +4,7 @@
   gather_facts: no
   connection: network_cli
   roles:
-    - parse_genie
+    - clay584.parse_genie
 
   tasks:
 
@@ -27,3 +27,7 @@
   - name: Debug Pyats facts
     debug:
      var: pyats_version.version.rtr_type
+
+  - name: Debug Pyats facts
+    debug:
+     var: pyats_version.version.chasis
