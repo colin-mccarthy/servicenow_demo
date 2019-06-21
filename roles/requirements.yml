@@ -15,4 +15,11 @@
   scm: git
   version: master
 
+- name: batfish.base
+  src: https://github.com/batfish/ansible
+  scm: git
+  version: master
+
+
+
 
