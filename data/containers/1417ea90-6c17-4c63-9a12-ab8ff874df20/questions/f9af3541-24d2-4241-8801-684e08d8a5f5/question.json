@@ -1,0 +1,30 @@
+{
+  "class": "org.batfish.question.bgpproperties.BgpProcessConfigurationQuestion",
+  "differential": false,
+  "instance": {
+    "description": "Returns configuration settings of BGP processes.",
+    "instanceName": "__bgpProcessConfiguration_73a3fad9-07ca-4862-a5e3-94fe73096659",
+    "longDescription": "Reports configuration settings for each BGP process on each node and VRF in the network. This question reports only process-wide settings. Peer-specific settings are reported by the bgpPeerConfiguration question.",
+    "tags": [
+      "bgp",
+      "configuration"
+    ],
+    "variables": {
+      "nodes": {
+        "description": "Include nodes matching this name or regex.",
+        "displayName": "Nodes",
+        "optional": true,
+        "type": "nodeSpec",
+        "value": ".*"
+      },
+      "properties": {
+        "description": "Include properties matching this regex.",
+        "displayName": "Properties",
+        "optional": true,
+        "type": "bgpProcessPropertySpec"
+      }
+    }
+  },
+  "nodes": "${nodes}",
+  "properties": "${properties}"
+}

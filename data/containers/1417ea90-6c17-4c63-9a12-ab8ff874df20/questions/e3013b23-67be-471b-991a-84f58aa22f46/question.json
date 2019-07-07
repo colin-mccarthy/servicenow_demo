@@ -1,0 +1,7 @@
+{
+  "class": "org.batfish.question.InitInfoQuestionPlugin$InitInfoQuestion",
+  "differential": false,
+  "instance": {
+    "instanceName": "__initInfo"
+  }
+}

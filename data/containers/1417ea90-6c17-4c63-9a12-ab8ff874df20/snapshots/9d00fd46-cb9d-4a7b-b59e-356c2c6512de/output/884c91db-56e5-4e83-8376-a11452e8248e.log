@@ -1,0 +1,195 @@
+
+*** READING HOST CONFIGS ***
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/hosts/host2.json"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/hosts/host1.json"
+
+*** PARSING VENDOR CONFIGURATION FILES ***
+Processing: 'hosts/host1.json'
+Job terminated successfully with result: <host1> after elapsed time: 00:00:00.27 - 1/2 (50.0%) complete
+Processing: 'hosts/host2.json'
+Job terminated successfully with result: <host2> after elapsed time: 00:00:00.28 - 2/2 (100.0%) complete
+Time taken for this task: 0.327 seconds
+Testrig:9d00fd46-cb9d-4a7b-b59e-356c2c6512de in container:1417ea90-6c17-4c63-9a12-ab8ff874df20 has total number of host configs:2
+*** PARSING VENDOR CONFIGURATION FILES ***
+Processing: 'iptables/host2.iptables'
+	Parsing...OK
+	Post-processing...OK
+Job terminated successfully with result: <iptables/host2.iptables> after elapsed time: 00:00:00.18 - 1/2 (50.0%) complete
+Processing: 'iptables/host1.iptables'
+	Parsing...OK
+	Post-processing...OK
+Job terminated successfully with result: <iptables/host1.iptables> after elapsed time: 00:00:00.19 - 2/2 (100.0%) complete
+Time taken for this task: 0.2 seconds
+
+*** SERIALIZING VENDOR CONFIGURATION STRUCTURES ***
+Time taken for this task: 0.288 seconds
+
+*** READING DEVICE CONFIGURATION FILES ***
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as3border1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as1core1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as3border2.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as1border1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as1border2.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2dist1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as3core1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2core1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2border1.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2dist2.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2core2.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2border2.cfg"
+Reading: "/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/input/configs/as2dept1.cfg"
+Snapshot 9d00fd46-cb9d-4a7b-b59e-356c2c6512de in network 1417ea90-6c17-4c63-9a12-ab8ff874df20 has total number of network configs:13	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+	Preprocessing...OK
+	Parsing...OK
+	Post-processing...OK
+
+*** SERIALIZING VENDOR CONFIGURATION STRUCTURES ***
+Time taken for this task: 0.127 seconds
+
+*** DESERIALIZING VENDOR CONFIGURATION STRUCTURES ***
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as3border1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as3border1
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2border2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2border2
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as1core1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as1core1
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'host2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/host2
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as3core1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as3core1
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2border1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2border1
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as3border2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as3border2
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'host1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/host1
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2dist1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2dist1
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2core1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2core1
+ ...OK
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2dist2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2dist2
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2core2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2core2
+ ...OK
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as1border1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as1border1
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as2dept1' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as2dept1
+ ...OK
+ ...OK
+ ...OK
+Reading and unzipping: org.batfish.datamodel.GenericConfigObject 'as1border2' from /data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/vendor/as1border2
+ ...OK
+Time taken for this task: 0.247 seconds
+
+*** CONVERTING VENDOR CONFIGURATIONS TO INDEPENDENT FORMAT ***
+Processing: "host2" ...OK
+Job terminated successfully with result: [host2] after elapsed time: 00:00:00.04 - 1/15 (6.7%) complete
+Processing: "host1" ...OK
+Job terminated successfully with result: [host1] after elapsed time: 00:00:00.05 - 2/15 (13.3%) complete
+Processing: "as2border1" ...OK
+Job terminated successfully with result: [as2border1] after elapsed time: 00:00:00.06 - 3/15 (20.0%) complete
+Processing: "as2dist2" ...OK
+Job terminated successfully with result: [as2dist2] after elapsed time: 00:00:00.11 - 4/15 (26.7%) complete
+Processing: "as1core1" ...OK
+Job terminated successfully with result: [as1core1] after elapsed time: 00:00:00.00 - 5/15 (33.3%) complete
+Processing: "as1border2" ...OK
+Job terminated successfully with result: [as1border2] after elapsed time: 00:00:00.12 - 6/15 (40.0%) complete
+Processing: "as2border2" ...OK
+Job terminated successfully with result: [as2border2] after elapsed time: 00:00:00.08 - 7/15 (46.7%) complete
+Processing: "as3border2" ...OK
+Job terminated successfully with result: [as3border2] after elapsed time: 00:00:00.02 - 8/15 (53.3%) complete
+Processing: "as2dept1" ...OK
+Job terminated successfully with result: [as2dept1] after elapsed time: 00:00:00.02 - 9/15 (60.0%) complete
+Processing: "as2core1" ...OK
+Job terminated successfully with result: [as2core1] after elapsed time: 00:00:00.01 - 10/15 (66.7%) complete
+Processing: "as2dist1" ...OK
+Job terminated successfully with result: [as2dist1] after elapsed time: 00:00:00.01 - 11/15 (73.3%) complete
+Processing: "as3core1" ...OK
+Job terminated successfully with result: [as3core1] after elapsed time: 00:00:00.00 - 12/15 (80.0%) complete
+Processing: "as3border1" ...OK
+Job terminated successfully with result: [as3border1] after elapsed time: 00:00:00.01 - 13/15 (86.7%) complete
+Processing: "as2core2" ...OK
+Job terminated successfully with result: [as2core2] after elapsed time: 00:00:00.02 - 14/15 (93.3%) complete
+Processing: "as1border1" ...OK
+   MISCELLANEOUS: Could not determine update source for BGP neighbor: '3.2.2.2'
+   MISCELLANEOUS: Could not determine update source for BGP neighbor: '5.6.7.8'
+Job terminated successfully with result: [as1border1] after elapsed time: 00:00:00.01 - 15/15 (100.0%) complete
+Time taken for this task: 0.182 seconds
+
+*** SERIALIZING 15 VENDOR-INDEPENDENT CONFIGURATION STRUCTURES FOR SNAPSHOT 9D00FD46-CB9D-4A7B-B59E-356C2C6512DE***
+Loading configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de}
+Loading configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de}, cache miss
+*** DESERIALIZING VENDOR-INDEPENDENT CONFIGURATION STRUCTURES ***
+Reading org.batfish.datamodel.Configuration 'as3border1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as3border1'
+Reading org.batfish.datamodel.Configuration 'as2core2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2core2'
+Reading org.batfish.datamodel.Configuration 'as1core1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as1core1'
+Reading org.batfish.datamodel.Configuration 'as2border2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2border2'
+Reading org.batfish.datamodel.Configuration 'as2dept1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2dept1'
+Reading org.batfish.datamodel.Configuration 'as2core1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2core1'
+Reading org.batfish.datamodel.Configuration 'as2border1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2border1'
+Reading org.batfish.datamodel.Configuration 'as3border2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as3border2'
+Reading org.batfish.datamodel.Configuration 'as2dist1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2dist1'
+Reading org.batfish.datamodel.Configuration 'host2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/host2'
+Reading org.batfish.datamodel.Configuration 'as1border1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as1border1'
+Reading org.batfish.datamodel.Configuration 'as3core1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as3core1'
+Reading org.batfish.datamodel.Configuration 'as1border2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as1border2'
+Reading org.batfish.datamodel.Configuration 'as2dist2' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/as2dist2'
+Reading org.batfish.datamodel.Configuration 'host1' from '/data/containers/1417ea90-6c17-4c63-9a12-ab8ff874df20/snapshots/9d00fd46-cb9d-4a7b-b59e-356c2c6512de/output/indep/host1'
+Loaded configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de} off diskLoading configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de}
+Loading configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de}
+Loading configurations for NetworkSnapshot{network=1417ea90-6c17-4c63-9a12-ab8ff874df20, snapshot=9d00fd46-cb9d-4a7b-b59e-356c2c6512de}
+{
+  "class" : "org.batfish.datamodel.answers.InitInfoAnswerElement",
+  "parseStatus" : {
+    "configs/as1border1.cfg" : "PASSED",
+    "configs/as1border2.cfg" : "PASSED",
+    "configs/as1core1.cfg" : "PASSED",
+    "configs/as2border1.cfg" : "PASSED",
+    "configs/as2border2.cfg" : "PASSED",
+    "configs/as2core1.cfg" : "PASSED",
+    "configs/as2core2.cfg" : "PASSED",
+    "configs/as2dept1.cfg" : "PASSED",
+    "configs/as2dist1.cfg" : "PASSED",
+    "configs/as2dist2.cfg" : "PASSED",
+    "configs/as3border1.cfg" : "PASSED",
+    "configs/as3border2.cfg" : "PASSED",
+    "configs/as3core1.cfg" : "PASSED",
+    "hosts/host1.json" : "PASSED",
+    "hosts/host2.json" : "PASSED",
+    "iptables/host1.iptables" : "PASSED",
+    "iptables/host2.iptables" : "PASSED"
+  }
+}{"answerElements":[{"class":"org.batfish.datamodel.answers.InitInfoAnswerElement","parseStatus":{"configs/as1border1.cfg":"PASSED","configs/as1border2.cfg":"PASSED","configs/as1core1.cfg":"PASSED","configs/as2border1.cfg":"PASSED","configs/as2border2.cfg":"PASSED","configs/as2core1.cfg":"PASSED","configs/as2core2.cfg":"PASSED","configs/as2dept1.cfg":"PASSED","configs/as2dist1.cfg":"PASSED","configs/as2dist2.cfg":"PASSED","configs/as3border1.cfg":"PASSED","configs/as3border2.cfg":"PASSED","configs/as3core1.cfg":"PASSED","hosts/host1.json":"PASSED","hosts/host2.json":"PASSED","iptables/host1.iptables":"PASSED","iptables/host2.iptables":"PASSED"}}],"status":"SUCCESS","summary":{"numFailed":0,"numPassed":0,"numResults":0}}

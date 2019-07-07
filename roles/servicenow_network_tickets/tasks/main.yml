@@ -1,0 +1,35 @@
+---
+
+  - name: show version
+    ios_command:
+      commands:
+        - show version
+    register: version
+
+
+  - name: Set Fact Genie Filter
+    set_fact: 
+      pyats_version: "{{ version['stdout'][0] | parse_genie(command='show version', os='ios') }}"
+
+
+  - name: Create an incident
+    snow_record:
+      state: present
+      table: incident
+      username: "{{ SN_USERNAME }}"
+      password: "{{ SN_PASSWORD }}"
+      instance: "{{ SN_INSTANCE }}"
+      data:
+        priority: "{{ priority}}"
+        u_device_up_time: "{{ pyats_version.version.uptime }}"
+        u_ios_version: "{{ pyats_version.version.version }}"
+        u_hostname: "{{ pyats_version.version.hostname }}"
+        u_platform: "{{ pyats_version.version.platform }}"
+        u_device_type: "{{ pyats_version.version.rtr_type }}"
+        u_serial_number: "{{ pyats_version.version.chassis_sn }}"
+        u_last_reload_reason: "{{ pyats_version.version.last_reload_reason }}"
+        short_description: "This ticket was created by Ansible"
+    register: new_incident
+
+
+  - debug: var=new_incident.record.number

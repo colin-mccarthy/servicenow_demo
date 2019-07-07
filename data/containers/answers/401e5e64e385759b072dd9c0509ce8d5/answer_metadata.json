@@ -1,0 +1,1 @@
+{"metrics":{"aggregations":{"OSPF_Cost":{"MAX":1},"OSPF_Area_Name":{"MAX":1},"MTU":{"MAX":1800}},"emptyColumns":["Access_VLAN","Channel_Group","Description","Encapsulation_VLAN","HSRP_Version","MLAG_ID","Native_VLAN","PBR_Policy_Name","Zone_Name"],"numExcludedRows":0,"numRows":67},"status":"SUCCESS"}
