@@ -3,23 +3,11 @@
   hosts: ios
   gather_facts: no
   connection: network_cli
-  roles:
-    - ansible-network.network-engine
 
   tasks:
   - name: include vars
     include_vars: incident_vars.yml
 
-  - name: show version
-    ios_command:
-      commands:
-        - show version
-    register: version
-
-  - name: parse show version
-    command_parser:
-      file: "parsers/show_version.yaml"
-      content: "{{ version.stdout.0 }}"
 
 
   - name: Create an incident
@@ -29,9 +17,7 @@
       data:
         severity: "{{ severity}}"
         priority: "{{ priority}}"
-        u_device_up_time: "{{ system_facts.uptime }}"
-        u_ios_version: "{{ system_facts.version }}"
-        short_description: "This ticket was created by Ansible"
+        short_description: "This ticket was created by Zabbix"
     register: new_incident
 
   - debug: var=new_incident.record.number
