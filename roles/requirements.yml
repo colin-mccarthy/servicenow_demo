@@ -14,5 +14,10 @@
   src: https://github.com/clay584/parse_genie
   scm: git
   version: master
+  
+- name: backup_manager
+  src: https://github.com/victorock/backup_manager
+  scm: git
+  version: master  
 
 
