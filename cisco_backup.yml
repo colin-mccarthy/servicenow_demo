@@ -3,6 +3,6 @@
   gather_facts: no
       
   roles:
-  - role: nmake.backup_manager
+  - role: backup_manager
     function: backup
     backup_manager_git_deploy_key: "{{ my_ssh_key_file }}"
