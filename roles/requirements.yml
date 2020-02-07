@@ -16,7 +16,7 @@
   version: master
   
 - name: backup_manager
-  src: https://github.com/victorock/backup_manager
+  src: https://github.com/colin-mccarthy/backup_manager
   scm: git
   version: master  
 
