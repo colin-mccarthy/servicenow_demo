@@ -1,6 +1,11 @@
 ---
 - hosts: ios
   gather_facts: no
+  
+  tasks:
+  - name: DISPLAY THE INJECTED EXTRA VAR
+    debug:
+      var: secret_key
       
   roles:
   - role: backup_manager
