@@ -10,5 +10,5 @@
   roles:
   - role: backup_manager
     function: backup
-    backup_manager_git_deploy_key: "{{ secret_key }}"
+    backup_manager_git_key_file: "{{ secret_key }}"
     
