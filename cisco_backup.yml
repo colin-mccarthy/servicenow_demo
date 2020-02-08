@@ -2,6 +2,10 @@
 - hosts: ios
   gather_facts: no
   
+  environment:
+    GIT_SSH_OPTS: “-o StrictHostKeyChecking=no ”
+    GIT_KEY: “{{ secret_key }}”  
+  
   tasks:
   - name: DISPLAY THE INJECTED EXTRA VAR
     debug:
