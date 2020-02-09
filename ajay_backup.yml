@@ -4,9 +4,9 @@
   gather_facts: no
   tasks:
 
-    - name: DISPLAY THE INJECTED EXTRA VAR
-      debug:
-        var: secret_key
+#    - name: DISPLAY THE INJECTED EXTRA VAR
+#      debug:
+#        var: secret_key
 
     - name: CLONE THE GIT REPO
       git:
