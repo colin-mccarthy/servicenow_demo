@@ -11,7 +11,7 @@
 
     - name: create file in repo
       copy:
-        dest: ansible-git/time.yml
+        dest: ansible_network_backups/time.yml
         content: "{{ ansible_date_time | to_nice_yaml}}"
 
     - name: git push
