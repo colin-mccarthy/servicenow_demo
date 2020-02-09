@@ -3,20 +3,18 @@
   hosts: ios
   gather_facts: no
   tasks:
-
-#    - name: DISPLAY THE INJECTED EXTRA VAR
-#      debug:
-#        var: secret_key
-
-#    - name: CLONE THE GIT REPO
-#      git:
-#        repo: git@github.com:colin-mccarthy/ansible_network_backups.git
-#        dest: /tmp/my_test_repo
-#        key_file: /home/vagrant/.ssh/id_rsa
-#      delegate_to: localhost     
  
     - name: git pull
       include_role:
         name: ansible-git
         tasks_from: pull
 
+    - name: create file in repo
+      copy:
+        dest: ansible-git/time.yml
+        content: "{{ ansible_date_time | to_nice_yaml}}"
+
+    - name: git push
+      include_role:
+        name: ansible-git
+        tasks_from: push
