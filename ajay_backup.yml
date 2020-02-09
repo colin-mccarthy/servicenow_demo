@@ -8,10 +8,15 @@
 #      debug:
 #        var: secret_key
 
-    - name: CLONE THE GIT REPO
-      git:
-        repo: git@github.com:colin-mccarthy/ansible_network_backups.git
-        dest: /tmp/my_test_repo
-        key_file: /home/vagrant/.ssh/id_rsa
-      delegate_to: localhost
+#    - name: CLONE THE GIT REPO
+#      git:
+#        repo: git@github.com:colin-mccarthy/ansible_network_backups.git
+#        dest: /tmp/my_test_repo
+#        key_file: /home/vagrant/.ssh/id_rsa
+#      delegate_to: localhost     
+ 
+    - name: git pull
+      include_role:
+        name: ansible-git
+        tasks_from: pull
 
