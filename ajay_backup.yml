@@ -12,6 +12,6 @@
       git:
         repo: git@github.com:colin-mccarthy/ansible_network_backups.git
         dest: /tmp/my_test_repo
-        key_file: /var/lib/awx/project/.ssh/id_rsa
+        key_file: /home/vagrant/.ssh/id_rsa
       delegate_to: localhost
 
