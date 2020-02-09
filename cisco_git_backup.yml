@@ -1,7 +1,7 @@
 ---
 - name: DEMO AN INTERACTIVE PRIVATE KEY
   hosts: ios
-  gather_facts: no
+  gather_facts: true
   tasks:
  
     - name: git pull
