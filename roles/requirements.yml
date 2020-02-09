@@ -20,4 +20,8 @@
   scm: git
   version: master  
 
+- name: ansible-git
+  src: https://github.com/colin-mccarthy/ansible-git
+  scm: git
+  version: master  
 
