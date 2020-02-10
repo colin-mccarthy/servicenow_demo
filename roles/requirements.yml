@@ -1,10 +1,4 @@
 ---
-
-#- name: ansible-network.network-engine
-#  src: https://github.com/ansible-network/network-engine
-#  scm: git
-#  version: devel
-
 - name: servicenow_network_tickets
   src: https://github.com/colin-mccarthy/servicenow_network_tickets
   scm: git
@@ -13,12 +7,7 @@
 - name: parse_genie
   src: https://github.com/clay584/parse_genie
   scm: git
-  version: master
-  
-#- name: backup_manager
-#  src: https://github.com/colin-mccarthy/backup_manager
-#  scm: git
-# version: master  
+  version: master 
 
 - name: ansible-git
   src: https://github.com/colin-mccarthy/ansible-git
