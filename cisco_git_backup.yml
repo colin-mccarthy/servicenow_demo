@@ -3,16 +3,21 @@
   hosts: ios
   gather_facts: true
   tasks:
- 
+  
     - name: git pull
       include_role:
         name: ansible-git
-        tasks_from: pull
+        tasks_from: pull  
+  
+    - name: BACKUP THE CONFIG
+      ios_config:
+        backup: yes
+      register: config_output
 
-    - name: create file in repo
+    - name: move backup to repo
       copy:
-        dest: ansible_network_backups/time.yml
-        content: "{{ ansible_date_time | to_nice_yaml}}"
+        src: "{{config_output.backup_path}}"
+        dest: "ansible_network_backups/{{inventory_hostname}}.config"  
 
     - name: git push
       include_role:
