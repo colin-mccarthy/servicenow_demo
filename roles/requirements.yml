@@ -1,5 +1,4 @@
 ---
----
 
 - name: ansible-network.network-engine
   src: https://github.com/ansible-network/network-engine
