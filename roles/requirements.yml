@@ -10,10 +10,10 @@
   scm: git
   version: pyats
 
-#- name: parse_genie
-#  src: https://github.com/clay584/parse_genie
-#  scm: git
-#  version: master
+- name: parse_genie
+  src: https://github.com/clay584/parse_genie
+  scm: git
+  version: master
   
 #- name: backup_manager
 #  src: https://github.com/colin-mccarthy/backup_manager
