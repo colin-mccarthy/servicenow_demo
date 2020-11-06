@@ -20,8 +20,8 @@ jobs:
         # or valid Ansible directories according to the Ansible role
         # directory structure.
         # If you want to lint multiple ansible files, use the following syntax
-       targets: |
-         intent_aaa.yml
+        targets: |
+          intent_aaa.yml
         #   playbook_2.yml
         # targets: "."
         # [optional]
