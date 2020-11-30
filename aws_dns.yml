@@ -37,7 +37,3 @@
       lines:
         - "no {{ item }}"
 
-  - name: servicenow_network_tickets
-    when: set_dns.changed or remove_dns.changed
-    import_role:
-      name: servicenow_network_tickets
