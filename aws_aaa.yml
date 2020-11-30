@@ -22,7 +22,7 @@
   tasks:
   
   - name: "GET CONFIG"
-    ios_command:
+    cisco.ios.ios_command:
       commands:
         - "show running-config full | include aaa"
     register: get_config
@@ -31,7 +31,7 @@
 
   - name: RUN 'Set aaa'
     with_items: "{{ aaa_configs }}"
-    ios_config:
+    cisco.ios.ios_config:
       lines:
         - "{{ item }}"
     register: set_aaa
@@ -40,7 +40,7 @@
     when: "(get_config.stdout_lines[0][0] != '') and (item not in aaa_configs)"
     with_items: "{{ get_config.stdout_lines[0] }}"
     register: remove_aaa
-    ios_config:
+    cisco.ios.ios_config:
       lines:
         - "no {{ item }}"
 
