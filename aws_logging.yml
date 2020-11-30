@@ -34,10 +34,10 @@
     loop: "{{ log.stdout_lines[0] }}"
     register: remove_logging
 
-  - name: servicenow_network_tickets
-    when: set_logging.changed or remove_logging.changed
-    import_role:
-      name: servicenow_network_tickets
+#  - name: servicenow_network_tickets
+#    when: set_logging.changed or remove_logging.changed
+#    import_role:
+#      name: servicenow_network_tickets
 
 
 
