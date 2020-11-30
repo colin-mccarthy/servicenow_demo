@@ -22,7 +22,7 @@
   tasks:
   
   - name: "GET CONFIG"
-    cisco.ios.ios_command:
+    ansible.netcommon.cli_command:
       commands:
         - "show running-config full | include aaa"
     register: get_config
