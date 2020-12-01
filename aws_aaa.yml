@@ -1,9 +1,10 @@
-- hosts: all
+---
+- hosts: ios
   gather_facts: no
-  connection: ansible.netcommon.network_cli
 
 
-  vars: 
+  vars:
+  
     aaa_configs:
       - aaa new-model
       - aaa authentication login default group tacacs+ local
@@ -19,12 +20,9 @@
       - aaa session-id common
 
   tasks:
-  - name: run show version command
-    ansible.netcommon.cli_command:
-      command: show version
   
   - name: "GET CONFIG"
-    ansible.netcommon.cli_command:
+    ios_command:
       commands:
         - "show running-config full | include aaa"
     register: get_config
@@ -33,16 +31,16 @@
 
   - name: RUN 'Set aaa'
     with_items: "{{ aaa_configs }}"
-    cisco.ios.ios_config:
+    ios_config:
       lines:
         - "{{ item }}"
     register: set_aaa
 
   - name: RUN 'Remove aaa'
-    when: "(get_config.stdout_lines[0][0] != '') and (item not in aaa_configs)"
+    when: "(get_config.stdout_lines[0] != '') and (item not in aaa_configs)"
     with_items: "{{ get_config.stdout_lines[0] }}"
     register: remove_aaa
-    cisco.ios.ios_config:
+    ios_config:
       lines:
         - "no {{ item }}"
 
